@@ -164,3 +164,440 @@ tbody:hover tr:hover td {
 
 tr:hover:not(#tasks-header), tr:hover td:empty {background: #c6effc; pointer-events: visible;}
 tr:hover:not(#tasks-header) { transform: scale(1.01); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+/* add task*/
+#task-form{
+  text-align: left;
+  display: inline-block;
+  padding: 20px;
+  width: 250px;
+  border: darkgreen 1px solid ;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  margin-left: -125px;
+  display: none;
+	background-color: #032b38;
+  text-align: center;
+}
+
+#task-form div{
+  display: flex;
+  justify-content: space-around;
+}
+
+label{
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+}
+
+#form-project, #form-title, #form-content, #form-date, #form-status{
+  width: 100%;
+  text-indent: 5px; 
+  margin-bottom: 20px;
+  margin-top: 8px;
+  font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+  font-weight: bold;
+  color: #f4511e;
+}
+
+option{
+  font-weight: bold;
+}
+
+button{
+  font-family: 'Roboto', sans-serif;
+}
+
+#form-title{
+  margin-bottom: 20px;
+}
+
+select, #form-project, #form-date, #form-status{
+  width: 60%;
+}
+
+select, #form-date { 
+  text-indent: 5px; 
+}
+
+#edit-Task{
+  display: none;
+}
+
+.form-button{
+  border-color: #f4511e;
+  background-color: #032b38;
+  border-radius: 25px;
+  width: 100px;
+  padding: 5px 0;
+  color: #f4511e;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-button:hover{
+  background-color: #f4511e;
+  color: #032b38;
+}
+/* project*/
+
+#project-list-names{
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.project-list, .project-change{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.project-change{
+  border-top: 1px solid;
+  margin-top: 50px;
+}
+
+.add-project{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#plus-project-title{
+  border-radius: 10px;
+  text-indent: 5px; 
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fas{
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.fa-edit:hover, .fa-plus:hover, .fa-sort-up:hover, .fa-sort-down:hover{
+  transform: scale(1.1) translateZ(0);
+}
+
+.fa-trash-alt:hover{
+  color: #f4511e;
+  font-size: 16.5px;
+}
+
+.project-name .fa-trash-alt{
+  padding-top: 5px;
+  
+}
+
+.project-name .fa-trash-alt:hover{
+  font-size: 18px;
+}
+
+.fa-plus{
+  font-size: 16px;
+  margin-right: 10px;
+  text-shadow: 0 1px 0 #000;
+}
+
+.fa-plus:hover{
+  color: #f4511e;
+}
+
+.simple-trash:hover{
+  color: black;
+  display: none;
+  cursor: auto;
+  font-size: 16px;
+}
+
+.project-name .simple-trash:hover{
+  color: white;
+  font-size: 16px;
+}
+
+.simple-trash{
+  display: none;
+}
+
+.project-name{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.project-select{
+  width: 80%;
+  border-top: 1px solid #555;
+  padding-top: 5px;
+  padding-left: 5px;
+	color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 0 #000;
+  font-size: 14px;
+}
+
+.project-select:hover, .project-hover:hover{
+  background-color: #777;
+  padding-left: 10px;
+}
+
+.project-hover:hover{
+  background-color: #888;
+}
+
+.project-hover{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 0 #000;
+  letter-spacing: 2px;
+  width: 82%;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#all-projects{
+  margin-bottom: 20px;
+  
+}
+
+ul li{
+  line-height: 24px;
+}
+
+/* Add task button */
+#button-Task {
+  border-radius: 50%;
+  background-color: #757575;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 115px;
+  cursor: pointer;
+  position: fixed; 
+  top: 20px; 
+  right: 20px; 
+}
+
+#button-Task span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#button-Task span:before{
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+  font-size: 20px;
+  margin: auto 0;
+}
+
+#button-Task:hover span {
+  padding-left: 20px;
+}
+
+#button-Task:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+#button-Task:focus{
+  outline: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sort-items{
+  flex-direction: column;
+}
+
+.fa-sort-up{
+  margin-bottom: -5px !important;
+}
+@media (max-width: 1100px) {
+  .project-hover{
+    font-size: 12px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+
+  .project-hover:hover, .project-select:hover{
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+
+  .project-select{
+    width: 80%;
+    padding-top: 0px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+
+  th {
+    padding: 5px 0px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  td{
+    padding: 5px 5px;
+    font-size: 12px;
+  }
+
+  .simple-trash:hover{
+    font-size: 12.5px;
+  }
+
+  .simple-trash{
+    font-size: 12px;
+  }
+
+  .active-trash{
+    font-size: 12px;
+  }
+
+  .project-name .simple-trash:hover{
+    font-size: 12.5px;
+  }
+
+  #plus-project-title{
+    text-indent: 2px; 
+    font-size: 12px;
+  }
+
+  .fa-trash-alt:hover{
+    color: #f4511e;
+    font-size: 12.5px;
+  }
+  
+  .project-name .fa-trash-alt{
+    padding-top: 0px;
+  }
+  
+  .project-name .fa-trash-alt:hover{
+    font-size: 12px;
+  }
+  
+  .fa-plus{
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .fa-sort-up{
+    margin-bottom: -10px !important;
+  }
+
+  .fa-plus:hover, .fa-sort-up:hover, .fa-sort-down:hover{
+    transform: scale(1.2) translateZ(0);
+  }
+
+  #button-Task {
+    font-size: 14px;
+    padding: 10px;
+    width: 85px;
+  }
+
+  #button-Task span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #button-Task span:before{
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+    font-size: 20px;
+    margin: auto 0;
+  }
+
+  #button-Task:hover span {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 850px) {
+  main{
+    display: block;
+    padding: 10px;
+  }
+
+  #tasks-section{
+    width: 100%;
+  }
+
+  #project-section{
+    width: 150px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+@media (max-width: 700px) {
+  th {
+    padding: 0px 0px;
+    font-size: 10px;
+  }
+
+  td{
+    padding: 0px 0px;
+    font-size: 10px;
+  }
+
+  #table-date div, #table-priority div{
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+    padding-right: 0px;
+  }
+
+  h1{
+    font-size: 24px;
+  }
+
+  #button-Task {
+    font-size: 12px;
+    padding: 5px;
+    width: 65px;
+  }
+
+  .project-select, .project-hover{
+    font-size: 10px;
+  }
+
+  #all-projects{
+    margin-bottom: 5px;
+  }
+
+  .project-change{
+    margin-top: 10px;
+  }
+
+  #plus-project-title{
+    text-indent: 1px; 
+    font-size: 10px;
+  }
+
+}
