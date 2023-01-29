@@ -53,3 +53,5 @@ const myProjects = (function () {
     myProjectsList,
   };
 })();
+
+export default myProjects;
