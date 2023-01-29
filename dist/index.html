@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://kit.fontawesome.com/a86fa0bd6e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My To Do App</h1>
+    </header>
+    <main>
+        <section id="project-section">
+            <div class="project-list">
+                <div class="project-names">
+                    <ul id="all-projects">
+                        <li class="project-name">
+                            <div class="project-hover" id="all-projects">All projects</div>
+                            <div class="trash-container">
+                                <i class="fas fa-trash-alt active-trash" id="delete-all-projects"></i>
+                                <i class="fas fa-trash-alt simple-trash"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="project-list-names">
+                    </ul>
+                </div>
+            </div>
+            <div class="project-change">
+                <div class="add-project">
+                    <i class="fas fa-plus" id="plus-project"></i>
+                    <input type="text" id="plus-project-title" placeholder="Add a project...">
+                </div>
+            </div>
+        </section>
+        <section id="tasks-section">
+            <table id="tasks-content">
+                <thead>
+                    <tr id="tasks-header">
+                        <th id="table-title">
+                            <div>
+                                <div>Title </div>
+                            </div>
+                        </th>
+                        <th id="table-preview">Preview</th>
+                        <th id="table-date">
+                            <div>
+                                <div>Date </div>
+                                <div class="sort-items">
+                                    <i class="fas fa-sort-up" id="date-sort-asc"></i>
+                                    <i class="fas fa-sort-down" id="date-sort-desc"></i>
+                                </div>
+                            </div>
+                        </th>
+                        <th id="table-priority">
+                            <div>
+                                <div>Priority </div>
+                                <div class="sort-items">
+                                    <i class="fas fa-sort-up" id="priority-sort-asc"></i>
+                                    <i class="fas fa-sort-down" id="priority-sort-desc"></i>
+                                </div>
+                            </div>
+                        </th>
+                        <th id="table-edit">Edit</th>
+                        <th id="table-delete">Delete</th>
+                    </tr>
+                <tbody id="tasks-items"></tbody>
+                </thead>
+            </table>
+        </section>
+
+    </main>
+
+    <form id="task-form">
+        <label for="form-title">Title</label>
+        <input type="text" id="form-title">
+        <label for="form-content">Content</label>
+        <textarea id="form-content" rows="5"></textarea>
+        <label for="form-project">Project</label><br>
+        <select id="form-project">
+            <option>All projects</option>
+        </select><br>
+        <label for="form-date">Date</label><br>
+        <input type="date" id="form-date"><br>
+        <label for="form-status">Priority</label><br>
+        <select id="form-status">
+            <option>High</option>
+            <option>Medium</option>
+            <option selected>Low</option>
+        </select><br><br><br>
+        <div>
+            <button type="button" id="add-Task" class="form-button">Add task</button>
+            <button type="button" id="edit-Task" class="form-button">Save changes</button>
+            <button type="button" id="cancel-Task" class="form-button">Cancel</button>
+        </div>
+    </form>
+
+    <div>
+        <button id="button-Task"><span>Add task</span></button>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
