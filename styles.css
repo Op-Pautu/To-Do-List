@@ -1,0 +1,166 @@
+table, tbody, tfoot, thead, tr, th, td, main, body, header, ul{
+	margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-color: #eee;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+
+ 
+  }
+  
+  main{
+    display: flex;
+    padding: 10px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+    color: #eee;
+  }
+
+  #project-section{
+    width: 20%;
+    margin-right: 20px;
+    background: linear-gradient(#777, #444);
+    border-left: 1px solid #555;
+    border-right: 1px solid #777;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 1px 0 #999;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 #000;	
+    box-shadow: inset 1px 1px 0 #999;
+    height: fit-content;
+    min-height: 20vh;
+  }
+  #tasks-section{
+    width: 80%;
+  }
+
+  h1{
+  text-align: center;
+ 
+  text-shadow: 0 2px 0 #000;	
+}
+
+/* table */
+
+table{
+  text-align: left;
+  line-height: 24px;
+  table-layout:fixed; 
+}
+
+#table-title{
+  width: 15%;
+}
+
+#table-preview{
+  width: 40%;
+}
+
+#table-date{
+  width: 12%;
+}
+
+#tasks-content{
+  width: 100%;
+}
+
+#table-priority{
+  width: 13%;
+}
+
+#table-edit{
+  width: 10%;
+}
+
+#table-delete{
+  width: 10%;
+}
+
+#table-date div, #table-priority div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+#table-date-arrow{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#table-date-arrow span{
+  font-size: 10px;
+  cursor: pointer;
+}
+
+td{
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 500ms;
+  word-wrap:break-word;
+  font-size: 14px;
+}
+
+tr{
+  background-color: #fff;
+}
+
+tr .delete-task, tr .edit-task{
+  text-align: center;
+}
+
+th {
+	background: linear-gradient(#777, #444);
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+  font-weight: bold;
+	padding: 10px 5px;
+	text-shadow: 0 1px 0 #000;
+	font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+th:first-child {
+	border-left: 1px solid #777;	
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+tr:hover:not(#tasks-header), tr:hover td:empty {background: #c6effc; pointer-events: visible;}
+tr:hover:not(#tasks-header) { transform: scale(1.01); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
