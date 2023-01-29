@@ -12,7 +12,7 @@ const localStorageStuff = (function () {
     let lenProject = myProjects.myProjectsList.length;
     localStorage.setItem('projectsNumber', lenProject);
 
-    for (let i = 0; i < myTasks.myTasksList.length; i++) {
+    for (let i = 0; i < lenTask; i++) {
       localStorage.setItem(`titleTask${i}`, myTasks.myTasksList[i].titleTask);
       localStorage.setItem(`selectedTask${i}`, myTasks.myTasksList[i].selected);
       localStorage.setItem(
@@ -30,7 +30,7 @@ const localStorageStuff = (function () {
       );
     }
 
-    for (let i = 0; i < myProjects.myProjectsList.length; i++) {
+    for (let i = 0; i < lenProject; i++) {
       localStorage.setItem(
         `titleProject${i}`,
         myProjects.myProjectsList[i].titleProject
